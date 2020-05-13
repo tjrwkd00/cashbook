@@ -24,6 +24,7 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
+	<div class="container">
 	<h1>로그인</h1>
 	<form id="loginForm" method="post" action="/login">
 		<div>
@@ -35,8 +36,12 @@ $(document).ready(function(){
 			<input type="password" id="memberPw" name="memberPw">
 		</div>
 		<div>
-			<button type="button" id="btn">로그인</button>
+			<span th:text="${msg}"></span>
+		</div>
+		<div>
+			<button type="button" id="btn" class="btn btn-primary">로그인</button>
 		</div>
 	</form>
+	</div>
 </body>
 </html>

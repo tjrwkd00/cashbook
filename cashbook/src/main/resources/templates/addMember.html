@@ -54,15 +54,29 @@ $(document).ready(function() {
 			$("#myForm").submit();
 		}
 	});
+	
+	$('idBtn').click(function(){
+		$('#idForm').submit();
+	});
 });
 </script>
 </head>
 <body>
+	<div class="container">
 	<h1>회원가입</h1>
+	<form id="idForm" method="post" action="/checkMemberId">
+		<div>
+			아이디 중복 확인 :
+			<input type="text" name="memberIdCheck" id="memberIdCheck">
+			<button id="idBtn" type="button" class="btn btn-info">중복체크</button>
+			<span th:text="${msg}"></span>
+		</div>
+	</form>
+	
 	<form id="myForm" method="post" action="/addMember">
 		<div>
 			아이디 :
-			<input type="text" name="memberId" id="memberId">
+			<input type="text" th:value="${memberIdCheck}" name="memberId" id="memberId" readonly="readonly">
 			<span id="idHelper"></span>
 		</div>
 		<div>
@@ -98,5 +112,6 @@ $(document).ready(function() {
 			<button type="button" class = "btn btn-primary" id="btn">회원가입</button>
 		</div>
 	</form>
+	</div>
 </body>
 </html>

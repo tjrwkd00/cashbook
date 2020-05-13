@@ -8,9 +8,7 @@ import com.gdu.cashbook.vo.Member;
 @Mapper
 public interface MemberMapper {
 	public int addMember(Member member);
-
+	public String selectMemberId(String memberIdCheck);
 	public LoginMember selectLoginMember(LoginMember loginMember);
-
-	
 }
 	
