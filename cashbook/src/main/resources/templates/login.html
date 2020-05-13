@@ -14,28 +14,29 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+	$('#btn').click(function(){
+		// 유효성검사 코드 구현하기
+		$("#loginForm").submit();
+	});
+});
+</script>
 </head>
-
 <body>
-	<div class="container">
-		<h1>가계부</h1>
-		<!-- 세션 분기 -->
-		
-		<div th:if="${session.LoginMember != null}">
-			<a href="/logout" class="btn btn-danger">로그아웃</a>
+	<h1>로그인</h1>
+	<form id="loginForm" method="post" action="/login">
+		<div>
+			member_id :
+			<input type="text" id="memberId" name="memberId">
 		</div>
-		
-		<div th:if="${session.LoginMember == null}">
-			<a href="/login" class="btn btn-primary">로그인</a>
+		<div>
+			member_pw :
+			<input type="password" id="memberPw" name="memberPw">
 		</div>
-		
-		
-		<div><a href="/addMember" class="btn btn-primary">회원가입</a></div>
-		
-		
-		<div>본 콘텐츠의 저작권은 제공처에 있으며, 이를 무단 이용하는 경우 저작권법 등에 따라 법적 책임을 질 수 있습니다.</div>
-		<div>Copyright © JWsoft Corp. All Rights Reserved.</div>
-	</div>
+		<div>
+			<button type="button" id="btn">로그인</button>
+		</div>
+	</form>
 </body>
-
 </html>
