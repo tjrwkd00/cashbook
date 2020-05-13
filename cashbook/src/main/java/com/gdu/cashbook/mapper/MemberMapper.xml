@@ -10,11 +10,11 @@
            member_phone,
            member_email
         ) VALUES (
-           #{memberId}
-           #{memberPw}
-           #{memberName}
-           #{memberAddr}
-           #{memberPhone}
+           #{memberId},
+           #{memberPw},
+           #{memberName},
+           #{memberAddr},
+           #{memberPhone},
            #{memberEmail}
         )
     </insert>

@@ -13,7 +13,7 @@ public class MemberService {
 	@Autowired
     private MemberMapper memberMapper;
 	
-    public int insertMember(Member member) {
-        return memberMapper.insertMember(member);
+    public int addMember(Member member) {
+        return memberMapper.addMember(member);
     }
 }

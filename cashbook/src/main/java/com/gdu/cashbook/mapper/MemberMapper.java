@@ -6,6 +6,6 @@ import com.gdu.cashbook.vo.Member;
 
 @Mapper
 public interface MemberMapper {
-	public int insertMember(Member member);
+	public int addMember(Member member);
 }
 	

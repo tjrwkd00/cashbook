@@ -20,7 +20,7 @@ public class MemberController {
 	
 	@PostMapping("/addMember") // 파라미터 노출  x
 	public String addMember(Member member) { // Command객체 , 도메인객체
-		memberService.insertMember(member);
+		memberService.addMember(member);
 		System.out.println(member.toString());
 		
 		return "redirect:/index";
