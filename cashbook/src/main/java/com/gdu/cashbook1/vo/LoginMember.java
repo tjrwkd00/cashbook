@@ -1,4 +1,4 @@
-package com.gdu.cashbook.vo;
+package com.gdu.cashbook1.vo;
 
 public class LoginMember {
 	private String memberId;

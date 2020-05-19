@@ -39,6 +39,10 @@ $(document).ready(function(){
 			<span th:text="${msg}"></span>
 		</div>
 		<div>
+			<a th:href="@{findMemberId}">아이디 찾기</a>
+			<a th:href="@{findMemberPw}">비밀번호 찾기</a>
+		</div>
+		<div>
 			<button type="button" id="btn" class="btn btn-primary">로그인</button>
 		</div>
 	</form>

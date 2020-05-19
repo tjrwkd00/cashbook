@@ -56,6 +56,12 @@ $(document).ready(function() {
 	});
 	
 	$('idBtn').click(function(){
+		if($('#memberIdCheck').val().length < 4) {
+			$('#memberIdCheckHelper').text("id 4자이상");
+			$('#memberIdCheck').focus();
+			return;
+		}
+		
 		$('#idForm').submit();
 	});
 });
@@ -74,6 +80,11 @@ $(document).ready(function() {
 	</form>
 	
 	<form id="myForm" method="post" action="/addMember">
+		<div>
+			사진 :
+			<input type="file" th:value="${memberPic}" name="memberPic" id="memberPic">
+			<span id="PicHelper"></span>
+		</div>
 		<div>
 			아이디 :
 			<input type="text" th:value="${memberIdCheck}" name="memberId" id="memberId" readonly="readonly">

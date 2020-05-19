@@ -1,18 +1,21 @@
-package com.gdu.cashbook.vo;
+package com.gdu.cashbook1.vo;
 
-public class Member {
+public class Member { // table의 도메인(스펙, 범위)와 일치한다고해서 도메인타입(vo
 	private String memberId;
 	private String memberPw;
 	private String memberName;
 	private String memberAddr;
 	private String memberPhone;
 	private String memberEmail;
+	private String memberPic;
 	
 	@Override
 	public String toString() {
 		return "Member [memberId=" + memberId + ", memberPw=" + memberPw + ", memberName=" + memberName
-				+ ", memberAddr=" + memberAddr + ", memberPhone=" + memberPhone + ", memberEmail=" + memberEmail + "]";
+				+ ", memberAddr=" + memberAddr + ", memberPhone=" + memberPhone + ", memberEmail=" + memberEmail
+				+ ", memberPic=" + memberPic + "]";
 	}
+	
 	
 	public String getMemberId() {
 		return memberId;
@@ -50,5 +53,12 @@ public class Member {
 	public void setMemberEmail(String memberEmail) {
 		this.memberEmail = memberEmail;
 	}
-
-}
+	public String getMemberPic() {
+		return memberPic;
+	}
+	public void setMemberPic(String memberPic) {
+		this.memberPic = memberPic;
+	}
+	
+	
+}	
